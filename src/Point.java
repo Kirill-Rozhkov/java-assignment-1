@@ -1,17 +1,31 @@
 public class Point {
-    int x;
-    int y;
-    int distance;
+    private int x;
+    private int y;
+    public int distance;
 
-    public Point(int x, int y) {
+    Point(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + getX() + ", " + getY() + ")";
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 
     public int distanceTo(int firstPoint, int secondPoint) {
         return distance;
     }
-    public String toString() {
-        return String.format("(%.2f, %.2f)", x, y);
+
+    public int getDistance() {
+        return distance;
     }
 }
