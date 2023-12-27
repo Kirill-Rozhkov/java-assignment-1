@@ -1,31 +1,31 @@
 public class Point {
-    private int x;
-    private int y;
-    public int distance;
+    public int x;
+    public int y;
+    public int distance = 0;
 
-    Point(int x, int y) {
+    public Point() {
+
+    }
+
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
     @Override
     public String toString() {
-        return "(" + getX() + ", " + getY() + ")";
+        return "(" + x + ", " + y + ")";
     }
 
-    public int getX() {
-        return x;
+    private void findDistance(Point firstPoint, Point secondPoint) {
+        int deltaX = secondPoint.x - firstPoint.x;
+        int deltaY = secondPoint.y - firstPoint.y;
+
+        distance = (int) Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2));
     }
 
-    public int getY() {
-        return y;
-    }
-
-    public int distanceTo(int firstPoint, int secondPoint) {
-        return distance;
-    }
-
-    public int getDistance() {
+    public int getDistance(Point firstPoint, Point secondPoint) {
+        findDistance(firstPoint, secondPoint);
         return distance;
     }
 }
