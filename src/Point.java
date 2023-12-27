@@ -17,7 +17,7 @@ public class Point {
         return "(" + x + ", " + y + ")";
     }
 
-    private void findDistance(Point firstPoint, Point secondPoint) {
+    public void findDistance(Point firstPoint, Point secondPoint) {
         int deltaX = secondPoint.x - firstPoint.x;
         int deltaY = secondPoint.y - firstPoint.y;
 

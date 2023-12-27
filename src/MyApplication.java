@@ -1,14 +1,10 @@
-import java.util.ArrayList;
 import java.util.Scanner;
-import java.awt.Point;
 
 public class MyApplication {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         Shape shape = new Shape();
-
-        Point point = new Point();
 
         for (int i = 0; i < 10; i++) {
             System.out.print("Enter coordinates of the " + (i + 1) + " point: ");
@@ -22,18 +18,6 @@ public class MyApplication {
             shape.add(new Point(x, y));
         }
 
-        shape.print();
+        shape.printCharacteristics();
     }
 }
-
-// 1 1
-// 8 0
-// 9 6
-// 6 9
-// 0 2
-// 8 7
-// 4 7
-// 6 5
-// 2 6
-// 7 2
-// 0 0
